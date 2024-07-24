@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { responsiveFontSize, responsiveHeight, responsiveWidth } from "react-native-responsive-dimensions";
 import { SafeAreaView, Text, Image, View, TouchableOpacity, StyleSheet, FlatList } from "react-native";
 import { horizontalScale, verticalScale } from "../Utils"
+import Ticketbookscreen from "./Ticketbookscreen";
 
 
 const matches = [
@@ -144,7 +145,7 @@ const matches = [
 
 export default function TicketScreen({ navigation}) {
   const handleSkip = () => {
-    navigation.navigate();
+    navigation.navigate(Ticketbookscreen);
   };
    
   const renderItem = ({ item }) => (
