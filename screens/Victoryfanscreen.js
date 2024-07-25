@@ -21,7 +21,7 @@ const data = [
         imageUrl: require('../assets/playerone.png'),
         imageUrl2: require('../assets/fans.png'),
         name: 'Artur Beckham',
-        time: '1 minutes ago',
+        time: '10 minutes ago',
         viewers: '25.2k',
         likes: '936',
     },
@@ -31,9 +31,9 @@ const data = [
         imageUrl: require('../assets/playerone.png'),
         imageUrl2: require('../assets/fans.png'),
         name: 'Artur Beckham',
-        time: '1 minutes ago',
-        viewers: '25.2k',
-        likes: '936',
+        time: '5 minutes ago',
+        viewers: '20.2k',
+        likes: '620',
     },
 
     {
@@ -41,9 +41,9 @@ const data = [
         imageUrl: require('../assets/playerone.png'),
         imageUrl2: require('../assets/fans.png'),
         name: 'Artur Beckham',
-        time: '1 minutes ago',
-        viewers: '25.2k',
-        likes: '936',
+        time: '25 minutes ago',
+        viewers: '15k',
+        likes: '850',
     },
 
     {
@@ -51,9 +51,9 @@ const data = [
         imageUrl: require('../assets/playerone.png'),
         imageUrl2: require('../assets/fans.png'),
         name: 'Artur Beckham',
-        time: '1 minutes ago',
-        viewers: '25.2k',
-        likes: '936',
+        time: '40 minutes ago',
+        viewers: '27.5k',
+        likes: '550',
     },
 
     {
@@ -61,9 +61,9 @@ const data = [
         imageUrl: require('../assets/playerone.png'),
         imageUrl2: require('../assets/fans.png'),
         name: 'Artur Beckham',
-        time: '1 minutes ago',
-        viewers: '25.2k',
-        likes: '936',
+        time: '55 minutes ago',
+        viewers: '30.5k',
+        likes: '780',
     },
 ];
 
@@ -79,33 +79,47 @@ export default function Victoryfanscreen({ navigation }) {
         </TouchableOpacity>
     );
 
-    // const renderItem2 = ({ item }) => (
-
-    //     <TouchableOpacity>
-    //         <View style={{ flexDirection: "column" }}>
-    //             <Image source={item.imageUrl2} style={styles.playerImage2} />
-    //             <Image source={item.imageUrl} style={styles.playerImage1} />
-    //         </View>
-    //     </TouchableOpacity>
-    // );
 
     const renderItem2 = ({ item }) => (
         <TouchableOpacity style={styles.containerViews}>
-            <View style={styles.columnContainer}>
+            <View style={styles.imageContainer2}>
                 <Image source={item.imageUrl2} style={styles.playerImage2} />
+            </View>
+            <View style={styles.imageContainer1}>
                 <Image source={item.imageUrl} style={styles.playerImage1} />
+
+
+                <View style={styles.datailcontainer}>
+                    <Text style={styles.fansdetail}>{item.name}</Text>
+                    <Text style={styles.fansdetail1}>{item.time}</Text>
+                </View>
+
+
+                <View style={styles.viewerscontainer}>
+                    <Image source={require('../assets/eye.png')} style={{ height: 20, width: 40  ,marginRight:-2}} />
+                    <Text style={styles.fansdetail2}>{item.viewers}</Text>
+                </View>
+
+
+                <View style={styles.likescontainer}>
+                    <Image source={require('../assets/like.png')} style={{ height: 20, width: 30,marginRight:-2}} />
+                    <Text style={styles.fansdetail3}>{item.likes}</Text>
+                </View>
             </View>
         </TouchableOpacity>
     );
 
     return (
         <SafeAreaView style={{ backgroundColor: "#FFFFFF", flex: 1 }}>
-            <View style={{ backgroundColor: "#000000", height: '37%', width: '100%', borderBottomEndRadius: 30, borderBottomLeftRadius: 30, alignItems: 'center', flexDirection: 'row', alignItems: 'flex-start' }}>
-                <TouchableOpacity onPress={() => navigation.goBack()}>
-                    <Image source={require('../assets/arrow.png')}
-                        style={{ tintColor: "#FFFFFF", width: responsiveWidth(7), height: responsiveHeight(2), marginHorizontal: 40, marginVertical: 70 }} />
-                </TouchableOpacity>
-                <Text style={{ color: "#FFFFFF", fontSize: 22, marginHorizontal: 15, marginVertical: 60, fontWeight: 'bold' }}>Victory Fans</Text>
+            <View style={{ backgroundColor: "#000000", height: '35%', width: '100%', borderBottomEndRadius: 30, borderBottomLeftRadius: 30, alignItems: 'center', flexDirection: 'column',alignItems:'flex-start' }}>
+                <View style={{ flexDirection: 'row' }}>
+                    <TouchableOpacity onPress={() => navigation.goBack()}>
+                        <Image source={require('../assets/arrow.png')}
+                            style={{ tintColor: "#FFFFFF", width: responsiveWidth(7), height: responsiveHeight(2),marginTop:verticalScale(50),marginLeft:horizontalScale(35) }} />
+                    </TouchableOpacity>
+
+                    <Text style={{ color: "#FFFFFF", fontSize: 22, fontWeight: 'bold',marginTop:verticalScale(45),marginLeft:horizontalScale(60)  }}>Victory Fans</Text>
+                </View>
 
                 <View style={styles.flatListContainer}>
                     <FlatList
@@ -114,24 +128,19 @@ export default function Victoryfanscreen({ navigation }) {
                         data={players}
                         renderItem={renderItem} />
                 </View>
+
+
             </View>
-            <View style={styles.flatListContainer}>
+
+            <View style={styles.flatListContainer2} >
+
                 <FlatList
-                    Vertical
-                    showsHorizontalScrollIndicator={false}
-                    data={players}
-                    renderItem={renderItem} />
-            </View>
-
-            {/* <View  style={styles.flatListContainer}>
-
-                <FlatList style={{ backgroundColor: "red" }}
-                    horizontal
+                    vertical
                     showsVerticalScrollIndicator={false}
                     data={data}
                     renderItem={renderItem2}
-                    keyExtractor={(item) => item.id}/>
-            </View> */}
+                    keyExtractor={(item) => item.id} />
+            </View>
 
         </SafeAreaView >
     );
@@ -150,7 +159,7 @@ const styles = StyleSheet.create({
         width: 85,
     },
     playerImage: {
-        alignItems: 'center',
+        alignItems: 'flex-start',
         width: 68,
         height: 68,
         borderRadius: 40,
@@ -160,7 +169,8 @@ const styles = StyleSheet.create({
     flatListContainer: {
         justifyContent: 'center',
         alignItems: 'center',
-        flex: 1
+        flex: 1,
+        marginTop:35
     },
     playerName: {
         marginTop: 10,
@@ -173,21 +183,64 @@ const styles = StyleSheet.create({
         width: 40,
         height: 40,
         borderRadius: 40,
+        marginTop: 15,
+        marginLeft: 25
     },
-    playerImage2: {
-        height: '70%',
-        width: '100%',
-        alignItems: 'center'
+    imageContainer1: {
+        alignItems: 'center',
+        flexDirection: 'row'
     },
-    containerViews: {
+
+    imageContainer2: {
         backgroundColor: "#FFFFFF"
     },
-    columnContainer: {
-        flexDirection: "column",
+
+    containerViews: {
+        backgroundColor: "#FFFFFF",
+        alignItems: 'center'
+
+    },
+    playerImage2: {
         alignItems: 'center',
-    }
+        height: 183,
+        width: 335,
+        marginTop: 50,
+        borderRadius: 20
+    },
+    flatListContainer2: {
+        flex: 1,
+        height: '100%',
+        width: '100%',
+    },
+    fansdetail: {
+        fontSize: 15,
+        fontWeight: 'bold',
+        color: '#171F24'
+    },
+    fansdetail1: {
+        fontSize: 12,
 
+    },
+    datailcontainer: {
+        flex: 1,
+        marginLeft: 15,
+        marginTop: 10
+    },
+    viewerscontainer: {
+        flexDirection: 'row',
+        marginTop:20,
+        
 
+    },
+    likescontainer:{
+        flexDirection:'row',
+        marginRight:25,
+        marginTop:20
+    },
+     fansdetail2:{
+        marginRight:10
+     }
+    
 });
 
 

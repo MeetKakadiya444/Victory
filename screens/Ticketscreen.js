@@ -238,7 +238,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: "#000",
   },
-  matchDetails: {
+    matchDetails: {
     fontSize: responsiveFontSize(1.5),
     color: "#5B6897",
     marginLeft: 55,
