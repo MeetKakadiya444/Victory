@@ -70,7 +70,6 @@ const data = [
 export default function Victoryfanscreen({ navigation }) {
 
     const renderItem = ({ item }) => (
-
         <TouchableOpacity>
             <View style={styles.imageContainer}>
                 <Image source={item.imageUrl} style={styles.playerImage} />
@@ -96,13 +95,13 @@ export default function Victoryfanscreen({ navigation }) {
 
 
                 <View style={styles.viewerscontainer}>
-                    <Image source={require('../assets/eye.png')} style={{ height: 20, width: 40  ,marginRight:-2}} />
+                    <Image source={require('../assets/eye.png')} style={{ height: 20, width: 40, marginRight: -2 }} />
                     <Text style={styles.fansdetail2}>{item.viewers}</Text>
                 </View>
 
 
                 <View style={styles.likescontainer}>
-                    <Image source={require('../assets/like.png')} style={{ height: 20, width: 30,marginRight:-2}} />
+                    <Image source={require('../assets/like.png')} style={{ height: 20, width: 30, marginRight: -2 }} />
                     <Text style={styles.fansdetail3}>{item.likes}</Text>
                 </View>
             </View>
@@ -111,14 +110,14 @@ export default function Victoryfanscreen({ navigation }) {
 
     return (
         <SafeAreaView style={{ backgroundColor: "#FFFFFF", flex: 1 }}>
-            <View style={{ backgroundColor: "#000000", height: '35%', width: '100%', borderBottomEndRadius: 30, borderBottomLeftRadius: 30, alignItems: 'center', flexDirection: 'column',alignItems:'flex-start' }}>
+            <View style={{ backgroundColor: "#000000", height: '35%', width: '100%', borderBottomEndRadius: 30, borderBottomLeftRadius: 30, alignItems: 'center', flexDirection: 'column', alignItems: 'flex-start' }}>
                 <View style={{ flexDirection: 'row' }}>
                     <TouchableOpacity onPress={() => navigation.goBack()}>
                         <Image source={require('../assets/arrow.png')}
-                            style={{ tintColor: "#FFFFFF", width: responsiveWidth(7), height: responsiveHeight(2),marginTop:verticalScale(50),marginLeft:horizontalScale(35) }} />
+                            style={{ tintColor: "#FFFFFF", width: responsiveWidth(7), height: responsiveHeight(2), marginTop: verticalScale(50), marginLeft: horizontalScale(35) }} />
                     </TouchableOpacity>
 
-                    <Text style={{ color: "#FFFFFF", fontSize: 22, fontWeight: 'bold',marginTop:verticalScale(45),marginLeft:horizontalScale(60)  }}>Victory Fans</Text>
+                    <Text style={{ color: "#FFFFFF", fontSize: 22, fontWeight: 'bold', marginTop: verticalScale(45), marginLeft: horizontalScale(60) }}>Victory Fans</Text>
                 </View>
 
                 <View style={styles.flatListContainer}>
@@ -170,7 +169,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         flex: 1,
-        marginTop:35
+        marginTop: 35
     },
     playerName: {
         marginTop: 10,
@@ -228,19 +227,19 @@ const styles = StyleSheet.create({
     },
     viewerscontainer: {
         flexDirection: 'row',
-        marginTop:20,
-        
+        marginTop: 20,
+
 
     },
-    likescontainer:{
-        flexDirection:'row',
-        marginRight:25,
-        marginTop:20
+    likescontainer: {
+        flexDirection: 'row',
+        marginRight: 25,
+        marginTop: 20
     },
-     fansdetail2:{
-        marginRight:10
-     }
-    
+    fansdetail2: {
+        marginRight: 10
+    }
+
 });
 
 
