@@ -149,7 +149,7 @@ export default function TicketScreen({ navigation}) {
   };
    
   const renderItem = ({ item }) => (
-    <TouchableOpacity style={styles.itemContainer}>
+    <TouchableOpacity onPress={handleSkip} style={styles.itemContainer}>
       <View style={{ backgroundColor: "#EFEFEF", height: '90%', width: '115%', marginTop: -20, marginLeft: -20, borderTopStartRadius: 25, borderTopRightRadius: 25 }}>
         <View style={[styles.circle, { backgroundColor: item.View1, marginLeft: horizontalScale(20), marginTop: verticalScale(18) }]} />
         <View style={[styles.circle, { backgroundColor: item.View2, marginLeft: horizontalScale(60), marginTop: verticalScale(18) }]} />
@@ -187,6 +187,7 @@ export default function TicketScreen({ navigation}) {
 
       <View style={{ height: '100%', width: '100%', flex: 1 ,marginTop:35,marginLeft:horizontalScale(25)}}>
         <FlatList
+         
           Vertical
           showsVerticalScrollIndicator={false}
           data={matches}

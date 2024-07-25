@@ -2,13 +2,17 @@ import React from "react";
 import { responsiveFontSize, responsiveHeight, responsiveWidth } from "react-native-responsive-dimensions";
 import { SafeAreaView, Text, Image, View, TouchableOpacity, ScrollView, TextInput } from "react-native";
 import { horizontalScale, verticalScale } from "../Utils"
+import Victoryfanscreen from "./Victoryfanscreen";
 
 
 export default function Qrscreen({ navigation }) {
+    const handleSkip = () => {
+        navigation.navigate(Victoryfanscreen);
+      };
     return (
         <SafeAreaView style={{ backgroundColor: "#04764E", flex: 1, alignItems: 'center' }}>
-            <View style={{ width: '80%', marginTop: verticalScale(30),  }}>
-                <TouchableOpacity>
+            <View style={{ width: '80%', marginTop: verticalScale(30), }}>
+                <TouchableOpacity onPress={() => navigation.goBack()}>
                     <Image source={require('../assets/arrow.png')} style={{ tintColor: "#FFFFFF", width: responsiveWidth(8.8), height: responsiveHeight(2.5), }}></Image>
                 </TouchableOpacity>
             </View>
@@ -32,10 +36,12 @@ export default function Qrscreen({ navigation }) {
                     </Text>
 
                 </View>
-                <Text style={{ backgroundColor: "#000000", color: "#FFFFFF", height: 40, width: 150, borderRadius: 6, paddingTop: 10, paddingLeft: 26, fontWeight: 'bold', marginTop: 20 }}>E Ticket issued</Text>
+                <TouchableOpacity  onPress={handleSkip}>
+                    <Text style={{ backgroundColor: "#000000", color: "#FFFFFF", height: 40, width: 150, borderRadius: 6, paddingTop: 10, paddingLeft: 26, fontWeight: 'bold', marginTop: 20 }}>E Ticket issued</Text>
+                </TouchableOpacity>
                 <Text style={{ backgroundColor: "#E6E6E6", height: '0.3%', width: '100%', marginTop: 20 }}></Text>
 
-                 
+
                 <View style={{ flexDirection: 'row', }}>
                     <View>
                         <Text style={{ color: "#A5A5A5", fontSize: 12, marginTop: 20, }}>Code</Text>
@@ -55,16 +61,16 @@ export default function Qrscreen({ navigation }) {
                     </View>
                 </View>
 
-                <View style={{width:'77%'}}>
-                <Text style={{ color: "#A5A5A5", fontSize: 12, marginTop: 30,  }}>Date</Text>
-                <Text style={{ color: "#595959", fontSize: 14, height: 22, fontWeight: 500, marginTop: 5 }}>Monday, 09 May 2021 - 19:45</Text>
+                <View style={{ width: '77%' }}>
+                    <Text style={{ color: "#A5A5A5", fontSize: 12, marginTop: 30, }}>Date</Text>
+                    <Text style={{ color: "#595959", fontSize: 14, height: 22, fontWeight: 500, marginTop: 5 }}>Monday, 09 May 2021 - 19:45</Text>
                 </View>
 
-                <View style={{borderColor:"#D7D7D7",height:170,width:170,borderWidth:1,borderRadius:20,marginTop:20}}>
-                   <Image source={require('../assets/qr.png')} style={{height:150,width:150,marginLeft:9,marginTop:9}}></Image>
+                <View style={{ borderColor: "#D7D7D7", height: 170, width: 170, borderWidth: 1, borderRadius: 20, marginTop: 20 }}>
+                    <Image source={require('../assets/qr.png')} style={{ height: 150, width: 150, marginLeft: 9, marginTop: 9 }}></Image>
                 </View>
-                
-                
+
+
             </View>
 
 

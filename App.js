@@ -19,7 +19,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Victoryfanscreen" screenOptions={{ headerShown: false }}>
+      <Stack.Navigator initialRouteName="splashscreen" screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Splashscreen" component={Splashscreen}></Stack.Screen>
         <Stack.Screen name="Onboadingscreen" component={Onboadingscreen}></Stack.Screen>
         <Stack.Screen name="Homescreen" component={Homescreen}></Stack.Screen>
