@@ -12,6 +12,10 @@ import Ticketbookscreen from "./screens/Ticketbookscreen";
 import Qrscreen from "./screens/Qrscreen";
 import Victoryfanscreen from "./screens/Victoryfanscreen";
 import Storescreen from "./screens/Storescreen";
+import Shoppingcardscreen from "./screens/Shoppingcardscreen";
+import Shippingmethodscreen from "./screens/Shippingmethodscreen";
+import Tablescreen from "./screens/Tablescreen";
+
 const Stack = createNativeStackNavigator();
 
 
@@ -19,7 +23,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Storescreen" screenOptions={{ headerShown: false }}>
+      <Stack.Navigator initialRouteName="Tablescreen" screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Splashscreen" component={Splashscreen}></Stack.Screen>
         <Stack.Screen name="Onboadingscreen" component={Onboadingscreen}></Stack.Screen>
         <Stack.Screen name="Homescreen" component={Homescreen}></Stack.Screen>
@@ -31,8 +35,9 @@ export default function App() {
         <Stack.Screen name="Qrscreen" component={Qrscreen}></Stack.Screen>
         <Stack.Screen name="Victoryfanscreen" component={Victoryfanscreen}></Stack.Screen>
         <Stack.Screen name="Storescreen" component={Storescreen}></Stack.Screen>
-
-
+        <Stack.Screen name="Shoppingcardscreen" component={Shoppingcardscreen}></Stack.Screen>
+        <Stack.Screen name="Shippingmethodscreen" component={Shippingmethodscreen}></Stack.Screen>
+        <Stack.Screen name="Tablescreen" component={Tablescreen}></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
   );

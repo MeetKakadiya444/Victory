@@ -15,7 +15,7 @@ const shoes = [
     {
         id: '2',
         imageurl: require('../assets/shoes2.png'),
-        productname: ' Greens Air\nSmart 683',
+        productname: 'Greens Air\nSmart 683',
         productdetail: 'Greens Sneakers',
         productprice: '$39.90'
     },

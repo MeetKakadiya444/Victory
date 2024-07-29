@@ -255,6 +255,3 @@ const styles = StyleSheet.create({
   },
 });
  
-
-
-
