@@ -148,7 +148,7 @@ export default function TicketScreen({ navigation}) {
     navigation.navigate(Ticketbookscreen);
   };
    
-  const renderItem = ({ item }) => (
+  const   renderItem = ({ item }) => (
     <TouchableOpacity onPress={handleSkip} style={styles.itemContainer}>
       <View style={{ backgroundColor: "#EFEFEF", height: '90%', width: '115%', marginTop: -20, marginLeft: -20, borderTopStartRadius: 25, borderTopRightRadius: 25 }}>
         <View style={[styles.circle, { backgroundColor: item.View1, marginLeft: horizontalScale(20), marginTop: verticalScale(18) }]} />
