@@ -68,6 +68,9 @@ const data = [
 ];
 
 export default function Victoryfanscreen({ navigation }) {
+    const handleSkip = () => {
+        navigation.navigate("Storescreen");
+    };
 
     const renderItem = ({ item }) => (
         <TouchableOpacity>
@@ -80,7 +83,7 @@ export default function Victoryfanscreen({ navigation }) {
 
 
     const renderItem2 = ({ item }) => (
-        <TouchableOpacity style={styles.containerViews}>
+        <TouchableOpacity onPress={handleSkip} style={styles.containerViews}>
             <View style={styles.imageContainer2}>
                 <Image source={item.imageUrl2} style={styles.playerImage2} />
             </View>

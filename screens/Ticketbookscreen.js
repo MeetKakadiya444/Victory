@@ -31,7 +31,7 @@ export default function Ticketbookscreen({navigation}) {
                     <Text style={{ color: "#000000", fontSize: 11, fontWeight: '300' }}>Italy</Text>
                 </Text>
             </View>
-            <ScrollView showsVerticalScrollIndicator={false} style={{ marginTop: 20, marginHorizontal: 15, overflow: 'hidden' }}>
+            <ScrollView showsVerticalScrollIndicator={false} style={{ marginTop: 20, marginHorizontal: 15,  }}>
                 <View style={{ flexDirection: 'row' }}>
                     <TouchableOpacity>
                         <Text style={{ backgroundColor: "#04764E", height: 50, width: 155, borderRadius: 6, color: "#FFFFFF", fontSize: 15, fontWeight: 'bold', paddingTop: 13.5, paddingLeft: 55 }}>Home</Text>

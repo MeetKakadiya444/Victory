@@ -22,13 +22,28 @@ const method = [
         productprice: '$ 12.99',
         address: 'Lorem ipsum dolor sit amet, consectetur\nadipiscing elit, sed do eiusmod tempor\nincididunt ut labore....'
     },
+    {
+        id: '4',
+        productdetail: 'Free Shipping',
+        productprice: '$ 0.00',
+        address: 'Lorem ipsum dolor sit amet, consectetur\nadipiscing elit, sed do eiusmod tempor\nincididunt ut labore....'
+    },
+    {
+        id: '5',
+        productdetail: 'Premium Shipping',
+        productprice: '$ 8.99',
+        address: 'Lorem ipsum dolor sit amet, consectetur\nadipiscing elit, sed do eiusmod tempor\nincididunt ut labore....'
+    },
+    {
+        id: '6',
+        productdetail: 'Super Fast Shipping',
+        productprice: '$ 12.99',
+        address: 'Lorem ipsum dolor sit amet, consectetur\nadipiscing elit, sed do eiusmod tempor\nincididunt ut labore....'
+    },
 ];
 
-export default function Shippingmethodscreen({ navigation }) {
-    const handleSkip = () => {
-        navigation.navigate("Tablescreen");
-    };
-
+export default function  Notificationscreen ({ navigation }) {
+     
     const renderItem = ({ item }) => (
         <TouchableOpacity style={styles.itemContainer1}>
             <View style={styles.productInfo}>
@@ -48,20 +63,12 @@ export default function Shippingmethodscreen({ navigation }) {
                     <TouchableOpacity onPress={() => navigation.goBack()}>
                         <Image source={require('../assets/arrow.png')} style={styles.backArrow} />
                     </TouchableOpacity>
-                    <Text style={styles.headerText}>Shipping Method</Text>
+                    <Text style={styles.headerText}>Notifications</Text>
                     <TouchableOpacity>
-                        <Image source={require('../assets/cart.png')}
-                            style={{ height: 24, width: 24, marginHorizontal: 45 }}>
-                        </Image>
+                        <Text style={{color:"#FFFFFF",fontSize:12,fontWeight:'400',marginTop:10,marginLeft:'35%'}}>Clear</Text>
                     </TouchableOpacity>
                 </View>
-            </View>
-            <View style={styles.TextView}>
-                <Text style={styles.Text}>Choose your{"\n"}
-                    Shipping method</Text>
-                <Text style={styles.Text2}>Amet minim mollit non deserunt ullamcoei{"\n"}
-                    sitaliqua dolor do amet sintelit officia.</Text>
-            </View>
+            </View>   
             <View style={styles.flatListContainer1}>
                 <FlatList
                     vertical
@@ -71,9 +78,7 @@ export default function Shippingmethodscreen({ navigation }) {
                     keyExtractor={item => item.id}
                 />
             </View>
-            <TouchableOpacity onPress={handleSkip} style={styles.TouchableOpacity2}>
-                <Text style={styles.Text3}>NEXT</Text>
-            </TouchableOpacity>
+            
         </SafeAreaView>
     );
 }
@@ -81,8 +86,7 @@ export default function Shippingmethodscreen({ navigation }) {
 const styles = StyleSheet.create({
     itemContainer1: {
         backgroundColor: "#FFFFFF",
-        marginVertical: 13,
-        marginHorizontal: 10,
+        marginVertical: 13,   
         borderRadius: 18,
         width: 310,
         height: 130,
@@ -96,7 +100,7 @@ const styles = StyleSheet.create({
     flatListContainer1: {
         flex: 1,
         alignItems: 'center',
-        marginTop: 20
+       
     },
 
 
@@ -139,7 +143,8 @@ const styles = StyleSheet.create({
         borderBottomEndRadius: 30,
         borderBottomLeftRadius: 30,
         marginBottom: verticalScale(30),
-        flexDirection: 'row',    
+        justifyContent:'center'    
+        
     },
 
 
@@ -161,40 +166,7 @@ const styles = StyleSheet.create({
         color: "#FFFFFF",
         fontSize: 22,
         fontWeight: 'bold',
-        marginLeft: horizontalScale(40),
-    },
-
-
-    TextView:{
-     marginRight:20
-    },
-
-
-    Text: {
-        fontSize: 24,
-        fontWeight: '600',
-        color: "#04764E"
-    },
-
-
-    Text2: {
-        marginTop: 20,
-        fontSize: 14,
-        fontWeight: '400',
-        color: "#000000",
-        letterSpacing: 0.5
-    },
-
-
-    TouchableOpacity2: {
-        backgroundColor: "#04764E",
-        height: 60,
-        width: 310,
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderRadius:52,
-        marginBottom: verticalScale(30),
-        marginTop: 10,   
+        marginLeft: horizontalScale(60),
     },
 
 

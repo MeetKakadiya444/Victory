@@ -178,14 +178,14 @@ export default function TicketScreen({ navigation}) {
         <Text style={{ color: "#FFFFFF", fontSize: 22 , marginHorizontal:45 , marginVertical:50}}>Tickets</Text>
       </View>
 
-      <View style={{ height: '100%', width: '100%', flex: 1 }}>
+      <View style={{ height: '100%', width: '100%', flex: 1,alignItems:'center' }}>
         <Image source={require('../assets/stadium.png')}
           style={{ width: 330, height: 230, borderRadius: 20, marginRight: horizontalScale(25), marginBottom: verticalScale(25) }} />
 
-        <Text style={{ color: "#000000", fontSize: 20, fontWeight: 'bold', height: '100%', width: '90%', marginHorizontal: horizontalScale(25) }}>Matchs</Text>
+        <Text style={{ color: "#000000", fontSize: 20, fontWeight: 'bold', height: '100%', width: '85%' }}>Matchs</Text>
       </View>
 
-      <View style={{ height: '100%', width: '100%', flex: 1 ,marginTop:35,marginLeft:horizontalScale(25)}}>
+      <View style={{ height: '100%', width: '100%', flex: 1 ,marginTop:35,alignItems:'center'}}>
         <FlatList
          
           Vertical

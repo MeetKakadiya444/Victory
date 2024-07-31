@@ -194,14 +194,17 @@ const matches = [
 ];
 
 export default function Tablescreen({ navigation }) {
-    const [selected, setSelected] = useState('League');
+    const handleSkip = () => {
+        navigation.navigate("Cardscreen");
+    };
 
+    const [selected, setSelected] = useState('League');
     const handlePress = (text) => {
         setSelected(text);
     };
 
     const renderItem = ({ item }) => (
-        <TouchableOpacity style={styles.itemContainer}>
+        <TouchableOpacity  onPress={handleSkip}  style={styles.itemContainer}>
             <View style={[styles.line, { backgroundColor: item.View1, }]} >
             </View>
             <View >

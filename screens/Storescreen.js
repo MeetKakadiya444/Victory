@@ -93,8 +93,11 @@ const clothes = [
     },
 ]
 export default function Storescreen({ navigation }) {
+    const handleSkip = () => {
+        navigation.navigate("Shoppingcardscreen");
+    };
     const renderItem = ({ item }) => (
-        <TouchableOpacity style={styles.itemContainer}>
+        <TouchableOpacity onPress={handleSkip} style={styles.itemContainer}>
             <View style={styles.imageContainer1}>
                 <Image source={item.imageurl} style={styles.imageStyle} />
                 <Text style={styles.productName}>{item.productname}</Text>
@@ -110,7 +113,7 @@ export default function Storescreen({ navigation }) {
 
     );
     const renderItem1 = ({ item }) => (
-        <TouchableOpacity style={styles.itemContainer1}>
+        <TouchableOpacity onPress={handleSkip} style={styles.itemContainer1}>
             <View style={styles.imageContainer2}>
                 <Image source={item.imageurl} style={styles.imageStyle1} />
                 <Text style={styles.productDetail1}>{item.productdetail}</Text>
@@ -130,7 +133,7 @@ export default function Storescreen({ navigation }) {
                     </TouchableOpacity>
 
                     <Text style={{ color: "#FFFFFF", fontSize: 22, fontWeight: 'bold', marginLeft: horizontalScale(55) }}>Store Greens</Text>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={handleSkip}>
                         <Image source={require('../assets/cart.png')}
                             style={{ height: 24, width: 24, marginHorizontal: 50 }}>
                         </Image>

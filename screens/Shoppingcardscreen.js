@@ -43,6 +43,9 @@ const clothes = [
 ];
 
 export default function Shoppingcardscreen({ navigation }) {
+    const handleSkip = () => {
+        navigation.navigate("Shippingmethodscreen");
+    };
     const renderItem = ({ item }) => (
         <TouchableOpacity style={styles.itemContainer1}>
             <View style={styles.imageContainer2}>
@@ -77,7 +80,7 @@ export default function Shoppingcardscreen({ navigation }) {
                     keyExtractor={item => item.id}
                 />
             </View>
-            <TouchableOpacity style={styles.TouchableOpacity2}>
+            <TouchableOpacity onPress={handleSkip} style={styles.TouchableOpacity2}>
                 <Text style={styles.Text}>NEXT</Text>
             </TouchableOpacity>
         </SafeAreaView>

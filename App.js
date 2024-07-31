@@ -16,6 +16,11 @@ import Shoppingcardscreen from "./screens/Shoppingcardscreen";
 import Shippingmethodscreen from "./screens/Shippingmethodscreen";
 import Tablescreen from "./screens/Tablescreen";
 import Cardscreen from "./screens/Cardscreen";
+import Settingscreen from "./screens/Settingscreen";
+import Upcomingscreen  from "./screens/Upcomingscreen";
+import Notificationscreen from "./screens/Notificationscreen";
+
+
 const Stack = createNativeStackNavigator();
 
 
@@ -23,7 +28,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Cardscreen" screenOptions={{ headerShown: false }}>
+      <Stack.Navigator initialRouteName="Notificationscreen" screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Splashscreen" component={Splashscreen}></Stack.Screen>
         <Stack.Screen name="Onboadingscreen" component={Onboadingscreen}></Stack.Screen>
         <Stack.Screen name="Homescreen" component={Homescreen}></Stack.Screen>
@@ -39,6 +44,11 @@ export default function App() {
         <Stack.Screen name="Shippingmethodscreen" component={Shippingmethodscreen}></Stack.Screen>
         <Stack.Screen name="Tablescreen" component={Tablescreen}></Stack.Screen>
         <Stack.Screen name="Cardscreen" component={Cardscreen}></Stack.Screen>
+        <Stack.Screen name="Settingscreen" component={Settingscreen}></Stack.Screen>
+        <Stack.Screen name="Upcomingscreen" component={Upcomingscreen}></Stack.Screen>
+        <Stack.Screen name="Notificationscreen" component={Notificationscreen}></Stack.Screen>
+
+
       </Stack.Navigator>
     </NavigationContainer>
   );
