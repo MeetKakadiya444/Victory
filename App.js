@@ -19,7 +19,8 @@ import Cardscreen from "./screens/Cardscreen";
 import Settingscreen from "./screens/Settingscreen";
 import Upcomingscreen  from "./screens/Upcomingscreen";
 import Notificationscreen from "./screens/Notificationscreen";
-
+import Topgoalscreen  from "./screens/Topgoalscreen";
+import Teamscreen  from "./screens/Teamscreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -28,7 +29,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Notificationscreen" screenOptions={{ headerShown: false }}>
+      <Stack.Navigator initialRouteName="Teamscreen" screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Splashscreen" component={Splashscreen}></Stack.Screen>
         <Stack.Screen name="Onboadingscreen" component={Onboadingscreen}></Stack.Screen>
         <Stack.Screen name="Homescreen" component={Homescreen}></Stack.Screen>
@@ -47,6 +48,9 @@ export default function App() {
         <Stack.Screen name="Settingscreen" component={Settingscreen}></Stack.Screen>
         <Stack.Screen name="Upcomingscreen" component={Upcomingscreen}></Stack.Screen>
         <Stack.Screen name="Notificationscreen" component={Notificationscreen}></Stack.Screen>
+        <Stack.Screen name="Topgoalscreen" component={Topgoalscreen}></Stack.Screen>
+        <Stack.Screen name="Teamscreen" component={Teamscreen}></Stack.Screen>
+
 
 
       </Stack.Navigator>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { responsiveFontSize, responsiveHeight, responsiveWidth } from "react-native-responsive-dimensions";
-import { SafeAreaView, Text, Image, View, TouchableOpacity, FlatList, StyleSheet,  } from "react-native";
+import { SafeAreaView, Text, Image, View, TouchableOpacity, FlatList, StyleSheet, } from "react-native";
 import { horizontalScale, verticalScale } from "../Utils"
 
 const matches = [
@@ -119,10 +119,11 @@ export default function Upcomingscreen({ navigation }) {
         navigation.navigate("Notificationscreen");
     };
     const renderItem = ({ item }) => (
-        <TouchableOpacity  onPress={handleSkip} style={styles.itemContainer}>
-            <View style={{ backgroundColor: "#F3F3F3", width: '95%', height: '85%', borderTopStartRadius: 25, borderTopRightRadius: 25, flexDirection: 'row', alignItems: 'center'}}>
+        <TouchableOpacity onPress={handleSkip} style={styles.itemContainer}>
+            <View style={{ backgroundColor: "#F3F3F3", width: '95%', height: '85%', borderTopStartRadius: 25, borderTopRightRadius: 25, flexDirection: 'row', alignItems: 'center' }}>
                 <Image source={item.Imageurl} style={styles.imageStyle} />
-                <Text style={[styles.teamName, { color: item.homeTeamColor }]}>{item.homeTeam} <Text style={styles.vsText}>VS  </Text>
+                <Text style={[styles.teamName, { color: item.homeTeamColor }]}>{item.homeTeam}
+                    <Text style={styles.vsText}>VS  </Text>
                     <Text style={[styles.teamName, { color: item.awayTeamColor }]}>{item.awayTeam}</Text></Text>
                 <Image source={item.Imageurl1} style={styles.imageStyle1} />
             </View>
@@ -139,7 +140,7 @@ export default function Upcomingscreen({ navigation }) {
     );
 
     return (
-        <SafeAreaView style={{flex: 1, alignItems: 'center' }}>
+        <SafeAreaView style={{ flex: 1, alignItems: 'center' }}>
             <View style={styles.header}>
                 <View style={styles.headerContent}>
                     <TouchableOpacity onPress={() => navigation.goBack()}>
@@ -203,13 +204,13 @@ const styles = StyleSheet.create({
 
     itemContainer: {
         padding: 10,
-        marginVertical:5,
+        marginVertical: 5,
         flex: 1,
         height: 100,
         width: 350,
         justifyContent: 'center',
         alignItems: 'center',
-        
+
     },
 
 
@@ -218,7 +219,7 @@ const styles = StyleSheet.create({
         fontSize: responsiveFontSize(2),
         fontWeight: 'bold',
         marginLeft: '25%',
-        marginTop:25
+        marginTop: 25
     },
 
 

@@ -6,58 +6,75 @@ import { horizontalScale, verticalScale } from "../Utils"
 const method = [
     {
         id: '1',
-        productdetail: 'Free Shipping',
-        productprice: '$ 0.00',
+        productdetail: 'Continue Payment',
+        productdetailcolor: "#000000",
+        borderColor: "#D7D7D7",
+        backgroundColor: "#FFFFFF",
+        date:'1 May 2021, 10:56 AM',
         address: 'Lorem ipsum dolor sit amet, consectetur\nadipiscing elit, sed do eiusmod tempor\nincididunt ut labore....'
     },
+
     {
         id: '2',
-        productdetail: 'Premium Shipping',
-        productprice: '$ 8.99',
+        productdetail: 'Greens Briefing: Sanchez Equals Record',
+        productdetailcolor: "#000000",
+        borderColor: "#D7D7D7",
+        backgroundColor: "#FFFFFF",
+        date:'1 May 2021, 10:56 AM',
         address: 'Lorem ipsum dolor sit amet, consectetur\nadipiscing elit, sed do eiusmod tempor\nincididunt ut labore....'
     },
+
     {
         id: '3',
-        productdetail: 'Super Fast Shipping',
-        productprice: '$ 12.99',
+        productdetail: 'Congratulations',
+        productdetailcolor: "#04764E",
+        borderColor: "#04764E",
+        backgroundColor: "#F6FBFF",
+        date:'1 May 2021, 10:56 AM',
         address: 'Lorem ipsum dolor sit amet, consectetur\nadipiscing elit, sed do eiusmod tempor\nincididunt ut labore....'
     },
+
     {
         id: '4',
-        productdetail: 'Free Shipping',
-        productprice: '$ 0.00',
+        productdetail: 'Ticket Booked',
+        productdetailcolor: "#04764E",
+        borderColor: "#04764E",
+        backgroundColor: "#F6FBFF",
+        date:'1 May 2021, 10:56 AM',
         address: 'Lorem ipsum dolor sit amet, consectetur\nadipiscing elit, sed do eiusmod tempor\nincididunt ut labore....'
     },
+
     {
         id: '5',
-        productdetail: 'Premium Shipping',
-        productprice: '$ 8.99',
+        productdetail: 'Congratulations',
+        productdetailcolor: "#04764E",
+        borderColor: "#04764E",
+        backgroundColor: "#F6FBFF",
+        date:'1 May 2021, 10:56 AM',
         address: 'Lorem ipsum dolor sit amet, consectetur\nadipiscing elit, sed do eiusmod tempor\nincididunt ut labore....'
     },
-    {
-        id: '6',
-        productdetail: 'Super Fast Shipping',
-        productprice: '$ 12.99',
-        address: 'Lorem ipsum dolor sit amet, consectetur\nadipiscing elit, sed do eiusmod tempor\nincididunt ut labore....'
-    },
+
 ];
 
-export default function  Notificationscreen ({ navigation }) {
-     
+export default function Notificationscreen({ navigation }) {
+    const handleSkip = () => {
+        navigation.navigate("Topgoalscreen");
+      };
+
     const renderItem = ({ item }) => (
-        <TouchableOpacity style={styles.itemContainer1}>
+        <TouchableOpacity  onPress={handleSkip} style={[styles.itemContainer1, { borderColor: item.borderColor }, { backgroundColor: item.backgroundColor }]}>
             <View style={styles.productInfo}>
-                <Text style={styles.productDetail1}>{item.productdetail}</Text>
-                <Text style={styles.productPrice1}>{item.productprice}</Text>
+                <Text style={[styles.productDetail1, { color: item.productdetailcolor }]}>{item.productdetail}</Text>
             </View>
             <View>
                 <Text style={styles.address}>{item.address}</Text>
+                <Text style={styles.date}>{item.date}</Text>
             </View>
         </TouchableOpacity>
     );
 
     return (
-        <SafeAreaView style={{ color: "#FFFFFF", flex: 1 ,alignItems:'center'}}>
+        <SafeAreaView style={{ color: "#FFFFFF", flex: 1, alignItems: 'center' }}>
             <View style={styles.header}>
                 <View style={styles.headerContent}>
                     <TouchableOpacity onPress={() => navigation.goBack()}>
@@ -65,10 +82,10 @@ export default function  Notificationscreen ({ navigation }) {
                     </TouchableOpacity>
                     <Text style={styles.headerText}>Notifications</Text>
                     <TouchableOpacity>
-                        <Text style={{color:"#FFFFFF",fontSize:12,fontWeight:'400',marginTop:10,marginLeft:'35%'}}>Clear</Text>
+                        <Text style={{ color: "#FFFFFF", fontSize: 12, fontWeight: '400', marginTop: 10, marginLeft: '35%' }}>Clear</Text>
                     </TouchableOpacity>
                 </View>
-            </View>   
+            </View>
             <View style={styles.flatListContainer1}>
                 <FlatList
                     vertical
@@ -78,29 +95,29 @@ export default function  Notificationscreen ({ navigation }) {
                     keyExtractor={item => item.id}
                 />
             </View>
-            
+
         </SafeAreaView>
     );
 }
 
 const styles = StyleSheet.create({
     itemContainer1: {
-        backgroundColor: "#FFFFFF",
-        marginVertical: 13,   
+
+        marginVertical: 10,
         borderRadius: 18,
         width: 310,
-        height: 130,
-        paddingHorizontal: 10,
+        height: 150,
+        paddingHorizontal: 5,
         flexDirection: 'column',
-        borderColor: "#D7D7D7",
-        borderWidth: 1,       
+
+        borderWidth: 1,
     },
 
 
     flatListContainer1: {
         flex: 1,
         alignItems: 'center',
-       
+
     },
 
 
@@ -114,16 +131,8 @@ const styles = StyleSheet.create({
 
 
     productDetail1: {
-        color: "#000000",
         fontSize: 14,
         fontWeight: '700',
-    },
-
-
-    productPrice1: {
-        color: "#000000",
-        fontSize: 14,
-        fontWeight: '400',
     },
 
 
@@ -132,7 +141,17 @@ const styles = StyleSheet.create({
         color: "#595959",
         fontWeight: '400',
         marginHorizontal: 20,
-        marginVertical: 25,
+        marginVertical: 13,
+    },
+
+
+    date: {
+        fontSize: 11,
+        color: "#595959",
+        fontWeight: '400',
+        marginHorizontal: 20,
+        marginVertical:8
+        
     },
 
 
@@ -143,8 +162,8 @@ const styles = StyleSheet.create({
         borderBottomEndRadius: 30,
         borderBottomLeftRadius: 30,
         marginBottom: verticalScale(30),
-        justifyContent:'center'    
-        
+        justifyContent: 'center'
+
     },
 
 
