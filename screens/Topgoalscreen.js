@@ -140,6 +140,7 @@ const styles = StyleSheet.create({
         
     },
     
+
     imageStyle:{
        width:23,
        height:27,
@@ -169,14 +170,9 @@ const styles = StyleSheet.create({
         height:100,
         borderWidth:1,
         borderColor:"#D7D7D7",
-        borderRadius:13
-        
-        
+        borderRadius:13        
      },
-
-
      
-
 
     header: {
         backgroundColor: "#04764E",

@@ -13,14 +13,14 @@ const Goalkeepers = [
     },
     {
         id: '2',
-        number: '2',
+        number: '21',
         name: 'Albert',
         surname: 'Kevin',
         imageurl: require('../assets/playerfive.png')
     },
     {
         id: '3',
-        number: '3',
+        number: '55',
         name: 'John',
         surname: 'Doe',
         imageurl: require('../assets/topgoal3.png')
@@ -30,7 +30,7 @@ const Goalkeepers = [
 const Defenders = [
     {
         id: '1',
-        number: '1',
+        number: '4',
         name: 'Michael',
         surname: 'Scott',
         imageurl: require('../assets/playerone.png')
@@ -44,49 +44,49 @@ const Defenders = [
     },
     {
         id: '3',
-        number: '3',
+        number: '5',
         name: 'Pam',
         surname: 'Beesly',
         imageurl: require('../assets/playerthree.png')
     },
     {
         id: '4',
-        number: '1',
+        number: '23',
         name: 'Dwight',
         surname: 'Schrute',
         imageurl: require('../assets/playerfour.png')
     },
     {
         id: '5',
-        number: '2',
+        number: '85',
         name: 'Andy',
         surname: 'Bernard',
         imageurl: require('../assets/playerfive.png')
     },
     {
         id: '6',
-        number: '3',
+        number: '44',
         name: 'Stanley',
         surname: 'Hudson',
         imageurl: require('../assets/topgoal4.png')
     },
     {
         id: '7',
-        number: '1',
+        number: '89',
         name: 'Phyllis',
         surname: 'Vance',
         imageurl: require('../assets/topgoal6.png')
     },
     {
         id: '8',
-        number: '2',
+        number: '58',
         name: 'Oscar',
         surname: 'Martinez',
         imageurl: require('../assets/topgoal3.png')
     },
     {
         id: '9',
-        number: '3',
+        number: '35',
         name: 'Creed',
         surname: 'Bratton',
         imageurl: require('../assets/topgoal1.png')
@@ -96,21 +96,21 @@ const Defenders = [
 const Midfielders = [
     {
         id: '1',
-        number: '1',
+        number: '9',
         name: 'Angela',
         surname: 'Martin',
         imageurl: require('../assets/topgoal3.png')
     },
     {
         id: '2',
-        number: '2',
+        number: '10',
         name: 'Kevin',
         surname: 'Malone',
         imageurl: require('../assets/topgoal2.png')
     },
     {
         id: '3',
-        number: '3',
+        number: '11',
         name: 'Toby',
         surname: 'Flenderson',
         imageurl: require('../assets/playerfour.png')
@@ -147,11 +147,11 @@ export default function Topgoalscreen({ navigation }) {
                     <TouchableOpacity onPress={() => navigation.goBack()}>
                         <Image source={require('../assets/arrow.png')} style={styles.backArrow} />
                     </TouchableOpacity>
-                    <Text style={styles.headerText}>Top Goalscorers</Text>
+                    <Text style={styles.headerText}>Team</Text>
                 </View>
             </View>
 
-            <View style={{ flexDirection: 'row', alignItems: 'center',}}>
+            <View style={{ flexDirection: 'row', alignItems: 'center',marginLeft:'15%'}}>
                 <TouchableOpacity onPress={() => handlePress('Men')}>
                     <Text style={[styles.tabText, selected === 'Men' && styles.selectedText]}>Men</Text>
                 </TouchableOpacity>
@@ -207,44 +207,42 @@ export default function Topgoalscreen({ navigation }) {
 
 const styles = StyleSheet.create({
     itemContainer: {
-     
         borderRadius: 13,
-        width: 100,
-        height: 150,
-        marginHorizontal: 5,
         overflow: 'hidden'
     },
     flatListContainer: {
         alignItems: 'center',
         marginVertical:10,
         height: 'auto',
-        backgroundColor:"#000000",
+         
     },
     imageBackground: {
         width: 100,
-        height: 100,
-        justifyContent: 'flex-end'
+        height: 107,
+        justifyContent: 'flex-end',
+        marginVertical:5,
+        marginHorizontal:5
     },
     imageBackgroundStyle: {
         borderRadius: 13,
     },
     overlay: {
-       
         padding: 5,
     },
     numberText: {
         color: 'white',
-        fontSize: 16,
+        fontSize: 8,
         fontWeight: 'bold',
     },
     line: {
-        height: 2,
+        height: 1,
         backgroundColor: 'white',
-        marginVertical: 5,
+        marginVertical: 2,
+        width:18
     },
     nameText: {
         color: 'white',
-        fontSize: 14,
+        fontSize: 8,
     },
     header: {
         backgroundColor: "#04764E",
@@ -269,15 +267,16 @@ const styles = StyleSheet.create({
         color: "#FFFFFF",
         fontSize: 22,
         fontWeight: 'bold',
-        marginLeft: horizontalScale(40)
+        marginLeft: horizontalScale(95)
     },
-    tabText: {
-        marginLeft: horizontalScale(12),
+    tabText: { 
         fontSize: responsiveFontSize(3),
         color: "#A5A5A5",
+        marginHorizontal:'4%',
     },
     selectedText: {  
         color: "#04764E",
-        textDecorationLine: 'underline',
+        
+        
     }
 });

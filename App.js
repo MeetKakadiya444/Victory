@@ -29,7 +29,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Teamscreen" screenOptions={{ headerShown: false }}>
+      <Stack.Navigator initialRouteName="Splashscreen" screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Splashscreen" component={Splashscreen}></Stack.Screen>
         <Stack.Screen name="Onboadingscreen" component={Onboadingscreen}></Stack.Screen>
         <Stack.Screen name="Homescreen" component={Homescreen}></Stack.Screen>
@@ -50,8 +50,6 @@ export default function App() {
         <Stack.Screen name="Notificationscreen" component={Notificationscreen}></Stack.Screen>
         <Stack.Screen name="Topgoalscreen" component={Topgoalscreen}></Stack.Screen>
         <Stack.Screen name="Teamscreen" component={Teamscreen}></Stack.Screen>
-
-
 
       </Stack.Navigator>
     </NavigationContainer>
