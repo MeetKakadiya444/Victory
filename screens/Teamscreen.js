@@ -210,12 +210,15 @@ const styles = StyleSheet.create({
         borderRadius: 13,
         overflow: 'hidden'
     },
+
+
     flatListContainer: {
         alignItems: 'center',
         marginVertical:10,
-        height: 'auto',
-         
+        height: 'auto',     
     },
+
+    
     imageBackground: {
         width: 100,
         height: 107,
@@ -223,27 +226,39 @@ const styles = StyleSheet.create({
         marginVertical:5,
         marginHorizontal:5
     },
+
+
     imageBackgroundStyle: {
         borderRadius: 13,
     },
+
+
     overlay: {
         padding: 5,
     },
+
+
     numberText: {
         color: 'white',
         fontSize: 8,
         fontWeight: 'bold',
     },
+
+
     line: {
         height: 1,
         backgroundColor: 'white',
         marginVertical: 2,
         width:18
     },
+
+
     nameText: {
         color: 'white',
         fontSize: 8,
     },
+
+
     header: {
         backgroundColor: "#04764E",
         height: '18%',
@@ -253,30 +268,38 @@ const styles = StyleSheet.create({
         marginBottom: verticalScale(30),
         justifyContent: 'center'
     },
+
+
     headerContent: {
         flexDirection: 'row',
         alignItems: 'center',
     },
+
+
     backArrow: {
         tintColor: "#FFFFFF",
         width: responsiveWidth(7),
         height: responsiveHeight(2),
         marginLeft: horizontalScale(35),
     },
+
+
     headerText: {
         color: "#FFFFFF",
         fontSize: 22,
         fontWeight: 'bold',
         marginLeft: horizontalScale(95)
     },
+
+
     tabText: { 
         fontSize: responsiveFontSize(3),
         color: "#A5A5A5",
         marginHorizontal:'4%',
     },
+
+
     selectedText: {  
-        color: "#04764E",
-        
-        
+        color: "#04764E",      
     }
 });
