@@ -126,13 +126,13 @@ export default function Storescreen({ navigation }) {
 
             <View style={{ backgroundColor: "#04764E", height: '18%', width: '100%', borderBottomEndRadius: 30, borderBottomLeftRadius: 30, marginBottom: verticalScale(30), alignItems: 'start', flexDirection: 'row' }}>
 
-                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                <View style={{ flexDirection: 'row', alignItems: 'center', marginTop:verticalScale(55) }}>
                     <TouchableOpacity onPress={() => navigation.goBack()}>
                         <Image source={require('../assets/arrow.png')}
                             style={{ tintColor: "#FFFFFF", width: responsiveWidth(7), height: responsiveHeight(2), marginLeft: horizontalScale(35) }} />
                     </TouchableOpacity>
 
-                    <Text style={{ color: "#FFFFFF", fontSize: 22, fontWeight: 'bold', marginLeft: horizontalScale(55) }}>Store Greens</Text>
+                    <Text style={{ color: "#FFFFFF", fontSize: 22, fontWeight: 'bold', marginLeft: horizontalScale(55)}}>Store Greens</Text>
                     <TouchableOpacity onPress={handleSkip}>
                         <Image source={require('../assets/cart.png')}
                             style={{ height: 24, width: 24, marginHorizontal: 50 }}>
@@ -209,7 +209,7 @@ const styles = StyleSheet.create({
         height: '70%',
         width: '70%',
         resizeMode: 'contain',
-        borderWidth: 2,
+        
 
 
     },

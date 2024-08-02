@@ -112,13 +112,13 @@ export default function Ticketbookscreen({navigation}) {
 
 
                 <View style={{ alignItems: 'center', marginTop: 70 }}>
-                    <TouchableOpacity onPress={handleSkip} style={{ backgroundColor: "#04764E", borderRadius: 50, marginTop: verticalScale(30), height: 70, width: '100%', alignItems: 'center' }}>
-                        <Text style={{ color: "#FFFFFF", fontSize: 16, fontWeight: 'bold', paddingTop: 23.5 }}>BOOKING</Text>
+                    <TouchableOpacity onPress={handleSkip} style={{ backgroundColor: "#04764E", borderRadius: 50, marginTop: verticalScale(30), height: 70, width: '100%', alignItems: 'center',justifyContent:'center' }}>
+                        <Text style={{ color: "#FFFFFF", fontSize: 16, fontWeight: 'bold',  }}>BOOKING</Text>
                     </TouchableOpacity></View>
 
                 <View style={{ alignItems: 'center', marginTop: 5 }}>
-                    <TouchableOpacity  onPress={handleSkip} style={{ backgroundColor: "#000000", borderRadius: 50, marginTop: verticalScale(30), height: 70, width: '100%', alignItems: 'center' }}>
-                        <Text style={{ color: "#FFFFFF", fontSize: 16, fontWeight: 'bold', paddingTop: 25 }}>SAVE SELECTIONS</Text>
+                    <TouchableOpacity  onPress={handleSkip} style={{ backgroundColor: "#000000", borderRadius: 50, marginTop: verticalScale(30), height: 70, width: '100%', alignItems: 'center',justifyContent:'center' }}>
+                        <Text style={{ color: "#FFFFFF", fontSize: 16, fontWeight: 'bold',  }}>SAVE SELECTIONS</Text>
                     </TouchableOpacity></View>
             </ScrollView>
         </SafeAreaView>

@@ -74,13 +74,13 @@ export default function Playerscreen({ navigation}) {
           contentContainerStyle={styles.swipeContainer}
         />
       </View>
-      <View style={{ flexDirection: 'row', marginBottom: 25 }}>
-        <TouchableOpacity  onPress={handleSkip} >
-          <Text style={{ marginRight: 10,  borderWidth: 1, borderColor: '#000000', borderRadius: 45, paddingHorizontal: 60, paddingVertical: 20, color: "#000000", fontHeight: "bold", fontSize: 16 }}>SKIP </Text>
+      <View style={{ flexDirection: 'row', height:'10%',width:'100%', alignItems:'center',justifyContent:'center'}}>
+        <TouchableOpacity  onPress={handleSkip} style={{height:60,width:160,backgroundColor:"#FFFFFF",alignItems:'center',justifyContent:'center',borderRadius:40,marginHorizontal:10,borderWidth:1,borderColor:"#CBCBCB"}} >
+          <Text style={{  color: "#CBCBCB", fontHeight: "bold", fontSize: 16,  }}>SKIP </Text>
           </TouchableOpacity>
 
-        <TouchableOpacity onPress={handleSkip} >
-          <Text style={{marginRight:horizontalScale(3.5), marginBottom:verticalScale(-5), borderRadius: 45, paddingHorizontal: 45, paddingVertical: 22, color: "#FFFFFF", fontHeight: "bold", fontSize: 16, backgroundColor: "#04764E" }}>CONFIRM</Text>
+        <TouchableOpacity onPress={handleSkip} style={{height:60,width:160,backgroundColor:"#04764E",alignItems:'center',justifyContent:'center',borderRadius:40,marginHorizontal:10}} >
+          <Text style={{ color: "#FFFFFF", fontHeight: "bold", fontSize: 16, color:'#FFFFFF'  }}>CONFIRM</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>

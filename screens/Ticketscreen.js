@@ -175,7 +175,7 @@ export default function TicketScreen({ navigation}) {
           <Image source={require('../assets/arrow.png')}
             style={{flexDirection:'row',tintColor: "#FFFFFF", width: responsiveWidth(7), margin:horizontalScale(35), height: responsiveHeight(2),marginVertical:verticalScale(60) }} />
         </TouchableOpacity>
-        <Text style={{ color: "#FFFFFF", fontSize: 22 , marginHorizontal:45 , marginVertical:50}}>Tickets</Text>
+        <Text style={{ color: "#FFFFFF", fontSize: 22 , marginHorizontal:45 , marginVertical:45}}>Tickets</Text>
       </View>
 
       <View style={{ height: '100%', width: '100%', flex: 1,alignItems:'center' }}>
@@ -210,8 +210,8 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     marginHorizontal: 16,
     borderRadius: 25,
-    width: 300,
-    height: 130,
+    width:responsiveWidth(85),
+    height:responsiveHeight(20),
     flex: 1,
 
   },

@@ -39,8 +39,8 @@ export default function Createaccountscreen({ navigation }) {
                 <TextInput placeholder="Password" style={{ height: 50, borderColor: "#CBCBCB", borderBottomWidth: 2, marginTop: verticalScale(15), paddingHorizontal: horizontalScale(20) }} secureTextEntry>
                 </TextInput>
 
-                <TouchableOpacity onPress={handleSkip} style={{ flexDirection: 'row', backgroundColor: "#000000", borderRadius: 50, marginTop: verticalScale(30), paddingBottom: verticalScale(20) }}>
-                    <Text style={{ color: "#FFFFFF", fontSize: 16, paddingLeft: horizontalScale(115), paddingTop: verticalScale(20), fontWeight: 500 }}>Sign Up</Text>
+                <TouchableOpacity onPress={handleSkip} style={{ flexDirection: 'row', backgroundColor: "#000000", borderRadius: 50, marginTop: verticalScale(30), paddingBottom: verticalScale(20) ,justifyContent:'center'}}>
+                    <Text style={{ color: "#FFFFFF", fontSize: 16,   paddingTop: verticalScale(20), fontWeight: 500 }}>Sign Up</Text>
                 </TouchableOpacity>
 
                 <Text style={{ color: "#000000", fontSize: responsiveFontSize(1.4), textAlign: "center", marginTop: verticalScale(20) }}>

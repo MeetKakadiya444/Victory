@@ -2,6 +2,7 @@ import React from "react";
 import { responsiveFontSize, responsiveHeight, responsiveWidth } from "react-native-responsive-dimensions";
 import { SafeAreaView, Text, Image, View, TouchableOpacity, FlatList, StyleSheet } from "react-native";
 import { horizontalScale, verticalScale } from "../Utils"
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 const method = [
     {
@@ -53,7 +54,7 @@ export default function Cardscreen({ navigation }) {
             <View style={styles.flatListContainer}>
                 <FlatList
                     horizontal
-                    showsVerticalScrollIndicator={false}
+                    showshorizontalScrollIndicator={false}
                     data={method}
                     renderItem={renderItem}
                     keyExtractor={item => item.id}

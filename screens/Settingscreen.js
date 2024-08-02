@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { responsiveFontSize, responsiveHeight, responsiveWidth } from "react-native-responsive-dimensions";
-import { SafeAreaView, Text, Image, View, TouchableOpacity, FlatList, StyleSheet, Switch } from "react-native";
+import { SafeAreaView, Text, Image, View, TouchableOpacity, FlatList, StyleSheet, Switch, ScrollView } from "react-native";
 import { horizontalScale, verticalScale } from "../Utils"
 
 
@@ -29,7 +29,7 @@ export default function Settingscreen({ navigation }) {
                 </View>
             </View>
 
-
+        <ScrollView showsVerticalScrollIndicator={false}>
             <View style={{ flexDirection: 'column', height: '100%', width: '85%', marginTop: 5 }}>
                 <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                     <Image source={require('../assets/bell.png')} style={styles.bellpng}></Image>
@@ -40,6 +40,7 @@ export default function Settingscreen({ navigation }) {
                     <Text style={styles.notification2}>Allow Notifications</Text>
                     <View></View>
                     <Switch
+                        
                         trackColor={{ false: "#C5CDE0", true: "#04764E" }}
                         thumbColor={isEnabled ? "#FFFFFF" : "#FFFFFF"}
                         onValueChange={toggleSwitch}
@@ -100,8 +101,10 @@ export default function Settingscreen({ navigation }) {
                 <TouchableOpacity onPress={handleSkip} style={{ flexDirection: 'row', marginTop: 15, width: 50 }}>
                     <Text style={styles.general5}>Logout</Text>
                 </TouchableOpacity>
+                
 
             </View>
+            </ScrollView>
         </SafeAreaView>
     );
 }
@@ -158,7 +161,7 @@ const styles = StyleSheet.create({
 
 
     notification2: {
-        fontSize: 16,
+        fontSize:responsiveFontSize(2),
         fontWeight: '400',
         color: "#8E99AF",
         width: 240,
@@ -166,7 +169,7 @@ const styles = StyleSheet.create({
 
 
     notification3: {
-        fontSize: 16,
+        fontSize:responsiveFontSize(2),
         fontWeight: '400',
         color: "#8E99AF"
     },
@@ -187,7 +190,7 @@ const styles = StyleSheet.create({
 
 
     Sync2: {
-        fontSize: 16,
+        fontSize:responsiveFontSize(2),
         fontWeight: '400',
         color: "#8E99AF",
     },
@@ -195,7 +198,7 @@ const styles = StyleSheet.create({
 
     Sync3: {
 
-        fontSize: 16,
+        fontSize:responsiveFontSize(2),
         fontWeight: '400',
         color: "#8E99AF",
         width: 240,
@@ -203,7 +206,7 @@ const styles = StyleSheet.create({
 
 
     Sync4: {
-        fontSize: 16,
+        fontSize:responsiveFontSize(2),
         fontWeight: '400',
         color: "#8E99AF",
     },
@@ -216,35 +219,35 @@ const styles = StyleSheet.create({
 
 
     general1: {
-        fontSize: 16,
+        fontSize:responsiveFontSize(2),
         fontWeight: '400',
         color: "#8E99AF",
     },
 
 
     general2: {
-        fontSize: 16,
+        fontSize:responsiveFontSize(2),
         fontWeight: '400',
         color: "#8E99AF",
     },
 
 
     general3: {
-        fontSize: 16,
+        fontSize:responsiveFontSize(2),
         fontWeight: '400',
         color: "#8E99AF",
     },
 
 
     general4: {
-        fontSize: 16,
+        fontSize:responsiveFontSize(2),
         fontWeight: '400',
         color: "#8E99AF",
     },
 
 
     general5: {
-        fontSize: 16,
+        fontSize:responsiveFontSize(2),
         fontWeight: '400',
         color: "#8E99AF",
     },

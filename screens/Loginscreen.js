@@ -33,8 +33,8 @@ export default function Loginscreen({ navigation }) {
                 </TextInput>
 
 
-                <TouchableOpacity style={{ flexDirection: 'row', backgroundColor: "#04764E", borderRadius: 45, marginTop: verticalScale(35), paddingBottom: verticalScale(20) }}>
-                    <Text style={{ color: "#FFFFFF", fontSize: responsiveFontSize(2), paddingLeft: horizontalScale(122), paddingTop: verticalScale(20), fontWeight: 500 }}>LOGIN</Text>
+                <TouchableOpacity style={{ flexDirection: 'row', backgroundColor: "#04764E", borderRadius: 45, marginTop: verticalScale(35), paddingBottom: verticalScale(20), justifyContent: 'center' }}>
+                    <Text style={{ color: "#FFFFFF", fontSize: responsiveFontSize(2), paddingTop: verticalScale(20), fontWeight: 500 }}>LOGIN</Text>
 
                 </TouchableOpacity>
 
@@ -45,12 +45,12 @@ export default function Loginscreen({ navigation }) {
                     </TouchableOpacity>
                 </View>
 
+                <View style={{alignItems:'center'}}>
+                    <Text style={{ color: "#8A8A8A", fontSize: 14,   letterSpacing: 0.7, marginTop: verticalScale(35) }}>Don’t have an account?</Text>
+                </View>
 
-                <Text style={{ color: "#8A8A8A", fontSize: 14, alignItems: "center", marginLeft: horizontalScale(65), letterSpacing: 0.7, marginTop: verticalScale(35) }}>Don’t have an account?</Text>
-
-
-                <TouchableOpacity onPress={handleSkip} style={{ flexDirection: 'row', backgroundColor: "#000000", borderRadius: 50, marginTop: verticalScale(20), paddingBottom: verticalScale(20) }}>
-                    <Text style={{ color: "#FFFFFF", fontSize: 16, paddingLeft: horizontalScale(60), paddingTop: verticalScale(20), fontWeight: 500 }}>CREATE AN ACCOUNT</Text>
+                <TouchableOpacity onPress={handleSkip} style={{ flexDirection: 'row', backgroundColor: "#000000", borderRadius: 50, marginTop: verticalScale(20), paddingBottom: verticalScale(20), justifyContent: 'center' }}>
+                    <Text style={{ color: "#FFFFFF", fontSize: 16, paddingTop: verticalScale(20), fontWeight: 500 }}>CREATE AN ACCOUNT</Text>
 
 
                 </TouchableOpacity>

@@ -13,11 +13,12 @@ export default function Onboadingscreen({ navigation }) {
 
 
             <View>
-                <Text style={{ color: "#000000", fontWeight: "bold", fontSize: 24, marginBottom: 7, left: 70 }}>Good Afternoon</Text>
+                <View style={{alignItems:'center'}}>
+                    <Text style={{ color: "#000000", fontWeight: "bold", fontSize: 24, marginBottom: 7, }}>Good Afternoon</Text>
 
 
-                <Text style={{ color: "#000000", fontHeight: "bold", fontSize: 16, marginBottom: 43, left: 109 }}>Welcome Back</Text>
-
+                    <Text style={{ color: "#000000", fontHeight: "bold", fontSize: 16, marginBottom: 43,   }}>Welcome Back</Text>
+                </View>
 
                 <Text style={{ color: "#000000", fontSize: 16, textAlign: 'center', marginBottom: 110, fontWeight: 1 }}>
                     Lorem ipsum dolor sit amet, consectetur{"\n"}
@@ -27,16 +28,15 @@ export default function Onboadingscreen({ navigation }) {
             </View>
 
 
-            <View style={{ flexDirection: 'row', marginBottom: 25 }}>
-                <TouchableOpacity onPress={handleSkip}>
-                    <Text style={{ right: 4, top: 10, borderWidth: 1, borderColor: '#000000', borderRadius: 45, paddingHorizontal: 65, paddingVertical: 20, color: "#000000", fontHeight: "bold", fontSize: 16 }}>SKIP</Text>
-                </TouchableOpacity>
+            <View style={{ flexDirection: 'row', height:'10%',width:'100%', alignItems:'center',justifyContent:'center'}}>
+        <TouchableOpacity  onPress={handleSkip} style={{height:60,width:160,backgroundColor:"#FFFFFF",alignItems:'center',justifyContent:'center',borderRadius:40,marginHorizontal:10,borderWidth:1,borderColor:"#000000"}} >
+          <Text style={{  color: "#000000", fontHeight: "bold", fontSize: 16,  }}>SKIP </Text>
+          </TouchableOpacity>
 
-
-                <TouchableOpacity onPress={handleSkip}>
-                    <Text style={{ left: 4, top: 10, borderRadius: 45, paddingHorizontal: 35, paddingVertical: 21, color: "#FFFFFF", fontHeight: "bold", fontSize: 16, backgroundColor: "#04764E" }}>CAMPAIGNS</Text>
-                </TouchableOpacity>
-            </View>
+        <TouchableOpacity onPress={handleSkip} style={{height:60,width:160,backgroundColor:"#04764E",alignItems:'center',justifyContent:'center',borderRadius:40,marginHorizontal:10}} >
+          <Text style={{ color: "#FFFFFF", fontHeight: "bold", fontSize: 16, color:'#FFFFFF'  }}>campaıgns</Text>
+        </TouchableOpacity>
+      </View>
         </SafeAreaView>
 
     );
