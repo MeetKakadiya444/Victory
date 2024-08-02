@@ -42,7 +42,7 @@ export default function Shippingmethodscreen({ navigation }) {
     );
 
     return (
-        <SafeAreaView style={{ color: "#FFFFFF", flex: 1 ,alignItems:'center'}}>
+        <SafeAreaView style={{   flex: 1 ,alignItems:'center',backgroundColor:"#FFFFFF"}}>
             <View style={styles.header}>
                 <View style={styles.headerContent}>
                     <TouchableOpacity onPress={() => navigation.goBack()}>

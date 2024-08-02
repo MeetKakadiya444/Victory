@@ -126,7 +126,7 @@ export default function Storescreen({ navigation }) {
 
             <View style={{ backgroundColor: "#04764E", height: '18%', width: '100%', borderBottomEndRadius: 30, borderBottomLeftRadius: 30, marginBottom: verticalScale(30), alignItems: 'start', flexDirection: 'row' }}>
 
-                <View style={{ flexDirection: 'row', alignItems: 'center', marginTop:verticalScale(55) }}>
+                <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent:'center' }}>
                     <TouchableOpacity onPress={() => navigation.goBack()}>
                         <Image source={require('../assets/arrow.png')}
                             style={{ tintColor: "#FFFFFF", width: responsiveWidth(7), height: responsiveHeight(2), marginLeft: horizontalScale(35) }} />

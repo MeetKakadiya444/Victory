@@ -4,10 +4,10 @@ import { SafeAreaView, Text, Image, View, TouchableOpacity, ScrollView, TextInpu
 import { horizontalScale, verticalScale } from "../Utils"
 
 
-export default function Ticketbookscreen({navigation}) {
+export default function Ticketbookscreen({ navigation }) {
     const handleSkip = () => {
         navigation.navigate("Qrscreen");
-      };
+    };
     const [selected, setSelected] = useState('Economy');
     return (
         <SafeAreaView style={{ color: "#FFFFFF", flex: 1 }}>
@@ -17,8 +17,7 @@ export default function Ticketbookscreen({navigation}) {
                     <Image source={require('../assets/arrow.png')}
                         style={{ flexDirection: 'row', tintColor: "#FFFFFF", width: responsiveWidth(7), margin: horizontalScale(35), height: responsiveHeight(2), marginVertical: verticalScale(60) }} />
                 </TouchableOpacity>
-                <Text style={{ color: "#FFFFFF", fontSize: 22, marginHorizontal: 45, marginVertical: 50 }}>Tickets</Text>
-
+                <Text style={{ color: "#FFFFFF", fontSize: 22, marginHorizontal: 25  }}>Tickets Detail</Text>
             </View>
 
             <View style={{ backgroundColor: '#ffffff', flexDirection: 'row', height: '16%', justifyContent: 'center', borderRadius: 14, marginTop: -25, marginHorizontal: 15 }}>
@@ -31,7 +30,7 @@ export default function Ticketbookscreen({navigation}) {
                     <Text style={{ color: "#000000", fontSize: 11, fontWeight: '300' }}>Italy</Text>
                 </Text>
             </View>
-            <ScrollView showsVerticalScrollIndicator={false} style={{ marginTop: 20, marginHorizontal: 15,  }}>
+            <ScrollView showsVerticalScrollIndicator={false} style={{ marginTop: 20, marginHorizontal: 15, }}>
                 <View style={{ flexDirection: 'row' }}>
                     <TouchableOpacity>
                         <Text style={{ backgroundColor: "#04764E", height: 50, width: 155, borderRadius: 6, color: "#FFFFFF", fontSize: 15, fontWeight: 'bold', paddingTop: 13.5, paddingLeft: 55 }}>Home</Text>
@@ -112,13 +111,13 @@ export default function Ticketbookscreen({navigation}) {
 
 
                 <View style={{ alignItems: 'center', marginTop: 70 }}>
-                    <TouchableOpacity onPress={handleSkip} style={{ backgroundColor: "#04764E", borderRadius: 50, marginTop: verticalScale(30), height: 70, width: '100%', alignItems: 'center',justifyContent:'center' }}>
-                        <Text style={{ color: "#FFFFFF", fontSize: 16, fontWeight: 'bold',  }}>BOOKING</Text>
+                    <TouchableOpacity onPress={handleSkip} style={{ backgroundColor: "#04764E", borderRadius: 50, marginTop: verticalScale(30), height: 70, width: '100%', alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ color: "#FFFFFF", fontSize: 16, fontWeight: 'bold', }}>BOOKING</Text>
                     </TouchableOpacity></View>
 
                 <View style={{ alignItems: 'center', marginTop: 5 }}>
-                    <TouchableOpacity  onPress={handleSkip} style={{ backgroundColor: "#000000", borderRadius: 50, marginTop: verticalScale(30), height: 70, width: '100%', alignItems: 'center',justifyContent:'center' }}>
-                        <Text style={{ color: "#FFFFFF", fontSize: 16, fontWeight: 'bold',  }}>SAVE SELECTIONS</Text>
+                    <TouchableOpacity onPress={handleSkip} style={{ backgroundColor: "#000000", borderRadius: 50, marginTop: verticalScale(30), height: 70, width: '100%', alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ color: "#FFFFFF", fontSize: 16, fontWeight: 'bold', }}>SAVE SELECTIONS</Text>
                     </TouchableOpacity></View>
             </ScrollView>
         </SafeAreaView>
